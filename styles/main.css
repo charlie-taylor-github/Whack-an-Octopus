@@ -1,3 +1,36 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: red;
+  padding: 20px;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+#content {
+  border: 3px solid green;
+
+  height: 100%;
+}
+
+header {
+  border: 3px solid blue;
+
+  height: 20%;
+}
+
+main {
+  border: 3px solid red;
+
+  height: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 3fr;
+}
+
+.column {
+  border: 1px solid green;
+
+  height: 100%;
 }
