@@ -10,7 +10,6 @@ const onCellClick = (type) => {
 
   state.generateGrid(config.EMPTY_1, config.EMPTY_2, config.TARGET);
   DOM.addOnCellClick(onCellClick);
-  state.output();
 };
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -36,10 +36,15 @@ class DOM {
     }
   }
 
+  static #setPoints(points) {
+    document.querySelector('#score-text').textContent = points;
+  }
+
   static update(state) {
     this.#setPage(state);
     this.#addCellsToGrid(state.grid);
     this.#setLifeImages(state.lives);
+    this.#setPoints(state.points);
   }
 
   static setProperty(property, value) {
