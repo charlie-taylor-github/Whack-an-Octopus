@@ -3,6 +3,8 @@ const setProperty = (property, value) => {
 }
 
 setProperty('--grid-size', config.GRID_SIZE);
+setProperty('--blue-light', `#${config.BLUE_LIGHT}`);
+setProperty('--blue-dark', `#${config.BLUE_DARK}`);
 
 // update the --vh custom property to the current viewport height
 window.addEventListener('resize', () => {

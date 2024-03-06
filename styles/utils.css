@@ -1,7 +1,4 @@
 :root {
-  --blue-light: #c6eafb;
-  --blue-dark: #00aeef;
-
   --grid-width: calc(var(--vh, 1vh) * 60);
 }
 
