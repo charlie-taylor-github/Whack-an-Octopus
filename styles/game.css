@@ -1,0 +1,19 @@
+#game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#grid {
+  border: 3px solid green;
+  width: var(--grid-width);
+  height: var(--grid-width);
+  
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), 1fr);
+  grid-template-rows: repeat(var(--grid-size), 1fr);
+}
+
+.grid-cell {
+  border: 1px solid red;
+}

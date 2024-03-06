@@ -1,0 +1,15 @@
+:root {
+  --grid-width: calc(var(--vh, 1vh) * 60);
+}
+
+@media (max-width: 1100px) {
+  :root {
+    --grid-width: calc(var(--vh, 1vh) * 40);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --grid-width: calc(var(--vh, 1vh) * 35);
+  }
+}
