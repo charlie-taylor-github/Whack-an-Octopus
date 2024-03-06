@@ -12,7 +12,9 @@ class State {
   constructor() {
     this.#state = {
       page: 'home-page',
-      grid: []
+      grid: [],
+      lives: 3,
+      points: 0
     }
   }
 
@@ -43,5 +45,17 @@ class State {
     }
 
     this.#update({ grid });
+  }
+
+  loseLife() {
+    this.#update({ lives: this.#state.lives - 1 });
+  }
+
+  output() {
+    console.log(this.#state);
+  }
+
+  addPoints(points) {
+    this.#update({ points: this.#state.points + points });
   }
 }

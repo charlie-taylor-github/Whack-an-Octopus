@@ -22,9 +22,21 @@ class DOM {
     }
   }
 
+  static #setLifeImages(lives) {
+    const lifeImages = document.querySelectorAll('.life-image');
+    for (let i = 0; i < lifeImages.length; i++) {
+      if (i < lives) {
+        lifeImages[i].style.display = 'block';
+      } else {
+        lifeImages[i].style.display = 'none';
+      }
+    }
+  }
+
   static update(state) {
     this.#setPage(state);
     this.#addCellsToGrid(state.grid);
+    this.#setLifeImages(state.lives);
   }
 
   static setProperty(property, value) {
