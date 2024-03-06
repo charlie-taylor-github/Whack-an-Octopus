@@ -1,5 +1,5 @@
 const state = new State();
 
 document.addEventListener('DOMContentLoaded', () => {
-  state.setPage('game-page');
+  state.setPage('home-page');
 });

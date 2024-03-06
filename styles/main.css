@@ -1,10 +1,13 @@
 @import 'utils.css';
-@import 'layout.css';
+@import './components/content.css';
 @import './components/header.css';
 @import './components/column-1.css';
 @import './components/column-2.css';
 @import './components/column-3.css';
 @import './components/game.css';
+
+@import './pages/game-page.css';
+@import './pages/home-page.css';
 
 * {
   box-sizing:border-box;
