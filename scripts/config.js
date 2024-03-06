@@ -7,5 +7,7 @@ config = {
   BLUE_LIGHT: "c6eafb",
   BLUE_DARK: "00aeef",
 
-  POINTS_PER_ROUND: 100
+  POINTS_PER_ROUND: 100,
+
+  TARGET_CELL_IMAGE: "./assets/images/target.jpg"
 };

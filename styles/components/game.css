@@ -14,6 +14,10 @@
   gap: 5px;
 }
 
+.grid-cell {
+  cursor: pointer;
+}
+
 .grid-cell-empty-1 {
   background-color: var(--blue-light);
 }
@@ -24,4 +28,10 @@
 
 .grid-cell-target {
   background-color: red;
+}
+
+.grid-cell > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
