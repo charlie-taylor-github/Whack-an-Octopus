@@ -1,0 +1,8 @@
+#game-info {
+  display: flex;
+}
+
+.info-column {
+  flex: 1;
+  border: 1px solid red;
+}

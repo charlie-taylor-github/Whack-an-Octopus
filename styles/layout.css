@@ -3,6 +3,7 @@
 }
 
 header {
+  border: 1px solid green;
   height: 20%;
 }
 
@@ -21,10 +22,14 @@ main {
   border: 3px solid blue;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
+  header {
+    height: 10%;
+  }
+
   main {
     flex-direction: column-reverse;
-    height: 80%;
+    height: 90%;
   }
 }
 

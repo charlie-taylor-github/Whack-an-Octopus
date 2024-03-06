@@ -1,5 +1,6 @@
 @import 'utils.css';
 @import 'layout.css';
+@import 'game-info.css';
 @import 'game.css';
 
 * {
@@ -11,4 +12,10 @@
 body {
   padding: 5% 10%;
   height: calc(var(--vh, 1vh) * 100);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 5%;
+  }
 }
