@@ -1,12 +1,13 @@
 class State {
   #state;
+  #timerId;
 
-  #update(changes) {
+  async #update(changes) {
     this.#state = {
       ...this.#state,
       ...changes
     };
-    DOM.update(this.#state);
+    await DOM.update(this.#state);
   }
 
   constructor() {
@@ -14,8 +15,10 @@ class State {
       page: 'home-page',
       grid: [],
       lives: 3,
-      points: 0
+      points: 0,
+      time: 0
     }
+    this.timerId = null;
   }
 
   setPage(page) {
@@ -28,7 +31,7 @@ class State {
     this.#update({ page });;
   }
 
-  generateGrid(empty1, empty2, target) {
+  async generateGrid(empty1, empty2, target) {
     const grid = [
       ...Array(empty1).fill('empty_1'),
       ...Array(empty2).fill('empty_2'),
@@ -44,7 +47,7 @@ class State {
       [grid[i], grid[j]] = [grid[j], grid[i]];
     }
 
-    this.#update({ grid });
+    await this.#update({ grid });
   }
 
   loseLife() {
@@ -57,5 +60,20 @@ class State {
 
   addPoints(points) {
     this.#update({ points: this.#state.points + points });
+  }
+
+  startTimer(time, callback) {
+    if (this.#timerId) clearInterval(this.#timerId);
+
+    this.#state.time = time;
+    this.#timerId = setInterval(() => {
+      this.#state.time -= 0.01;
+      DOM.updateTimer(this.#state.time);
+      if (this.#state.time <= 0) {
+        clearInterval(this.#timerId);
+        this.#timerId = null;
+        callback();
+      }
+    }, 10);
   }
 }

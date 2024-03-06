@@ -47,6 +47,13 @@ class DOM {
     this.#setPoints(state.points);
   }
 
+  static updateTimer(time) {
+    if (!time instanceof Number) throw Error('time must be number');
+    let value = time.toFixed(1);
+    if (value <= 0) value = 0;
+    document.querySelector('#timer-text').textContent = value;
+  }
+
   static setProperty(property, value) {
     document.documentElement.style.setProperty(property, value);
   }
@@ -60,14 +67,24 @@ class DOM {
   }
 
   static addOnCellClick(callback) {
-    const cells = document.getElementsByClassName('grid-cell');
+    const cells = document.querySelectorAll('.grid-cell');
     for (const c of cells) {
       let type;
       if (c.classList.contains('grid-cell-empty-1')) type = 'empty_1';
       else if (c.classList.contains('grid-cell-empty-2')) type = 'empty_2';
       else if (c.classList.contains('grid-cell-target')) type = 'target';
       else continue;
-      c.addEventListener('click', () => callback(type));
+      c.addEventListener('click', (e) => {
+        e.stopPropagation();
+        callback(type);
+      });
+    }
+  }
+
+  static removeOnCellClick(callback) {
+    const cells = document.getElementsByClassName('grid-cell');
+    for (const c of cells) {
+      c.removeEventListener('click', callback);
     }
   }
 }

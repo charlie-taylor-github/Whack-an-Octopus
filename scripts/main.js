@@ -1,13 +1,20 @@
 const state = new State();
 
-const resetGrid = () => {
+const resetRound = () => {
+  DOM.removeOnCellClick(onCellClick);
+  state.startTimer(config.TIME_PER_ROUND, () => {
+    state.loseLife();
+    resetRound();
+  });
+
   state.generateGrid(
     config.EMPTY_1,
     config.EMPTY_2,
     config.TARGET
   );
+
   DOM.addOnCellClick(onCellClick);
-}
+};
 
 const onCellClick = (type) => {
   if (type === 'target') {
@@ -16,10 +23,10 @@ const onCellClick = (type) => {
     state.loseLife();
   }
 
-  resetGrid();
+  resetRound();
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   state.setPage('game-page');
-  resetGrid();
+  resetRound();
 });

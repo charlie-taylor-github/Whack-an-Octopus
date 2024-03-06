@@ -8,6 +8,7 @@ config = {
   BLUE_DARK: "00aeef",
 
   POINTS_PER_ROUND: 100,
+  TIME_PER_ROUND: 3,
 
   TARGET_CELL_IMAGE: "./assets/images/target.jpg"
 };
