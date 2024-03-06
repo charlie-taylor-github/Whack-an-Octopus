@@ -12,6 +12,7 @@ class State {
   constructor() {
     this.#state = {
       page: 'home-page',
+      grid: []
     }
   }
 
@@ -23,5 +24,24 @@ class State {
       throw new Error(`Invalid page: ${page}`);
     }
     this.#update({ page });;
+  }
+
+  generateGrid(empty1, empty2, target) {
+    const grid = [
+      ...Array(empty1).fill('empty_1'),
+      ...Array(empty2).fill('empty_2'),
+      ...Array(target).fill('target'),
+    ];
+
+    if (grid.length !== config.GRID_SIZE ** 2) {
+      throw new Error('Invalid grid size');
+    }
+
+    for (let i = grid.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [grid[i], grid[j]] = [grid[j], grid[i]];
+    }
+
+    this.#update({ grid });
   }
 }

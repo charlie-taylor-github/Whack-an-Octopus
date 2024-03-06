@@ -5,15 +5,23 @@
 }
 
 #grid {
-  border: 3px solid green;
   width: var(--grid-width);
   height: var(--grid-width);
   
   display: grid;
   grid-template-columns: repeat(var(--grid-size), 1fr);
   grid-template-rows: repeat(var(--grid-size), 1fr);
+  gap: 5px;
 }
 
-.grid-cell {
-  border: 1px solid red;
+.grid-cell-empty-1 {
+  background-color: var(--blue-light);
+}
+
+.grid-cell-empty-2 {
+  background-color: var(--blue-dark);
+}
+
+.grid-cell-target {
+  background-color: red;
 }
