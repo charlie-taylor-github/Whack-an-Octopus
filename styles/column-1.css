@@ -1,0 +1,27 @@
+#lives {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#lives > div {
+  width: 100%;
+  height: calc(100% / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#lives > div > img {
+  width: 50%;
+}
+
+#high-score {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

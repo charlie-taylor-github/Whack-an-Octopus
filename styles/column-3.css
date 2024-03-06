@@ -1,0 +1,22 @@
+#timer {
+  height: 80%;
+}
+
+#timer > h2{
+  font-size: 12rem;
+  line-height: 1;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  #timer > h2 {
+    font-size: 8rem;
+  }
+}
+
+#score {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

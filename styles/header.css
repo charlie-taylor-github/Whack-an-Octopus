@@ -1,0 +1,21 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  font-size: 5rem;
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #title {
+    font-size: 3rem;
+  }
+}
