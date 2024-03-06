@@ -1,5 +1,5 @@
 const state = new State();
 
 document.addEventListener('DOMContentLoaded', () => {
-  state.setPage('home-page');
+  state.setPage('winner-page');
 });

@@ -1,0 +1,22 @@
+.simple-page > .content > header {
+  height: 20%;
+} 
+
+.simple-page > .content > main {
+  height: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+@media (max-width: 1000px) {
+  .simple-page > .content > header {
+    height: 20%;
+  } 
+  
+  .simple-page > .content > main {
+    height: 40%;  
+  }
+}
