@@ -7,3 +7,4 @@ window.addEventListener(
 );
 
 window.dispatchEvent(new Event('resize'));
+// window.onerror = e => alert(e);

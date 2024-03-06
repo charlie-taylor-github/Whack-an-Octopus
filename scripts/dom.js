@@ -38,4 +38,16 @@ class DOM {
       `${vh}px`
     );
   }
+
+  static addOnCellClick(callback) {
+    const cells = document.getElementsByClassName('grid-cell');
+    for (const c of cells) {
+      let type;
+      if (c.classList.contains('grid-cell-empty-1')) type = 'empty_1';
+      else if (c.classList.contains('grid-cell-empty-2')) type = 'empty_2';
+      else if (c.classList.contains('grid-cell-target')) type = 'target';
+      else continue;
+      c.addEventListener('click', () => callback(type));
+    }
+  }
 }
