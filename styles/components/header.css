@@ -4,18 +4,18 @@ header {
   align-items: center;
 }
 
-#title {
+.title {
   font-size: 5rem;
 }
 
 @media (max-width: 768px) {
-  #title {
+  .title {
     font-size: 4rem;
   }
 }
 
 @media (max-width: 500px) {
-  #title {
+  .title {
     font-size: 3rem;
   }
 }

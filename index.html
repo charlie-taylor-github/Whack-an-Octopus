@@ -10,58 +10,75 @@
 
 <body>
 
-  <div id="content">
-    <header>
-      <h1 id="title">Octopus Game</h1>
-    </header>
-    <main>
-      <section id="game-info" class="main-section">
-        <div class="info-column">
-          <div id="lives">
-            <div>
-              <img src="./assets/images/life.png">
-            </div>
-            <div>
-              <img src="./assets/images/life.png">
-            </div>
-            <div>
-              <img src="./assets/images/life.png">
-            </div>
-          </div>
-          <div id="high-score" class="score">
-            <h2>999</h2>
-          </div>
-        </div>
-        <div class="info-column">
-          <div id="score-images">
-            <div>
-              <img src="./assets/images/score.jpg">
-            </div>
-            <div>
-              <img src="./assets/images/score.jpg">
-            </div>
-            <div>
-              <img src="./assets/images/score.jpg">
-            </div>
-          </div>
-        </div>
-        <div class="info-column">
-          <div id="timer">
-            <h2>3</h2>
-          </div>
-          <div id="score" class="score">
-            <h2>999</h2>
-          </div>
-        </div>
-      </section>
-
-      <section id="game" class="main-section">
-        <div id="grid"></div>
-      </section>
-    </main>
+  <div id="home-page" class="page">
+    <h1>Home Page</h1>
   </div>
 
+  <div id="game-over-page" class="page">
+    <h1>Game Over Page</h1>
+  </div>
+
+  <div id="winner-page" class="page">
+    <h1>Winner Page</h1>
+  </div>
+
+  <div id="game-page" class="page">
+    <div class="content">
+      <header>
+        <h1 class="title">Octopus Game</h1>
+      </header>
+      <main>
+        <section id="game-info" class="main-section">
+          <div class="info-column">
+            <div id="lives">
+              <div>
+                <img src="./assets/images/life.png">
+              </div>
+              <div>
+                <img src="./assets/images/life.png">
+              </div>
+              <div>
+                <img src="./assets/images/life.png">
+              </div>
+            </div>
+            <div id="high-score" class="score">
+              <h2>999</h2>
+            </div>
+          </div>
+          <div class="info-column">
+            <div id="score-images">
+              <div>
+                <img src="./assets/images/score.jpg">
+              </div>
+              <div>
+                <img src="./assets/images/score.jpg">
+              </div>
+              <div>
+                <img src="./assets/images/score.jpg">
+              </div>
+            </div>
+          </div>
+          <div class="info-column">
+            <div id="timer">
+              <h2>3</h2>
+            </div>
+            <div id="score" class="score">
+              <h2>999</h2>
+            </div>
+          </div>
+        </section>
+
+        <section id="game" class="main-section">
+          <div id="grid"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+
   <script src="./scripts/config.js"></script>
+  <script src="./scripts/dom.js"></script>
+  <script src="./scripts/state.js"></script>
   <script src="./scripts/setup.js"></script>
   <script src="./scripts/main.js"></script>
 </body>
