@@ -1,19 +1,25 @@
 const state = new State();
 
-const onCellClick = (type) => {
+const resetGrid = () => {
+  state.generateGrid(
+    config.EMPTY_1,
+    config.EMPTY_2,
+    config.TARGET
+  );
+  DOM.addOnCellClick(onCellClick);
+}
 
+const onCellClick = (type) => {
   if (type === 'target') {
     state.addPoints(config.POINTS_PER_ROUND);
   } else {
     state.loseLife();
   }
 
-  state.generateGrid(config.EMPTY_1, config.EMPTY_2, config.TARGET);
-  DOM.addOnCellClick(onCellClick);
+  resetGrid();
 };
 
 document.addEventListener('DOMContentLoaded', () => {
   state.setPage('game-page');
-  state.generateGrid(config.EMPTY_1, config.EMPTY_2, config.TARGET);
-  DOM.addOnCellClick(onCellClick);
+  resetGrid();
 });
