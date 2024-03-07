@@ -1,8 +1,6 @@
 class State {
   #state;
   #timerId;
-  #onWin;
-  #onLose;
 
   async #update(changes) {
     this.#state = {
@@ -12,7 +10,7 @@ class State {
     DOM.update(this.#state);
   }
 
-  constructor(onWin) {
+  constructor() {
     this.#state = {
       page: 'home-page',
       grid: [],
@@ -22,7 +20,6 @@ class State {
       timePerRound: 0,
     }
     this.#timerId = null;
-    this.onWin = onWin;
   }
 
   setPage(page) {
@@ -86,5 +83,13 @@ class State {
   updateTimePerRound(getNextTimePerRound) {
     const timeForNextRound = getNextTimePerRound(this.#state.timePerRound);
     this.#update({ timePerRound: timeForNextRound });
+  }
+
+  getPoints() {
+    return this.#state.points;
+  }
+
+  getLives() {
+    return this.#state.lives;
   }
 }

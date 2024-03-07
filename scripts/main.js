@@ -26,6 +26,16 @@ const onCellClick = (type) => {
     state.loseLife();
   }
 
+  if (state.getLives() <= 0) {
+    state.setPage('game-over-page');
+    return;
+  }
+
+  if (state.getPoints() >= config.WINNING_POINTS) {
+    state.setPage('winner-page');
+    return;
+  }
+
   resetRound();
 };
 
