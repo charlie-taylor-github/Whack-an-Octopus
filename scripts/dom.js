@@ -40,6 +40,10 @@ class DOM {
     document.querySelector('#score-text').textContent = points;
   }
 
+  static #setHighscore(highscore) {
+    document.querySelector('#high-score-text').textContent = highscore;
+  }
+
   static #setScoreImages(points) {
     const progress = points / config.WINNING_POINTS;
     const totalStates = 3 * 10;
@@ -66,6 +70,7 @@ class DOM {
     this.#addCellsToGrid(state.grid);
     this.#setLifeImages(state.lives);
     this.#setPoints(state.points);
+    this.#setHighscore(state.highscore);
     this.#setScoreImages(state.points);
   }
 

@@ -13,6 +13,7 @@ class State {
   constructor() {
     this.#state = {
       page: 'home-page',
+      highscore: 0,
       grid: [],
       lives: 3,
       points: 0,
@@ -60,7 +61,12 @@ class State {
   }
 
   addPoints(points) {
-    this.#update({ points: this.#state.points + points });
+    const newPoints = this.#state.points + points;
+    if (newPoints > this.#state.highscore) {
+      this.#update({ highscore: newPoints });
+    };
+
+    this.#update({ points: newPoints });
   }
 
   startTimer(callback) {
@@ -101,5 +107,9 @@ class State {
       time: 0,
       timePerRound: 0,
     });
+  }
+
+  resetHighscore() {
+    this.#update({ highscore: 0 });
   }
 }

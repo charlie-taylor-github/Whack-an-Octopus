@@ -3,14 +3,14 @@
 }
 
 #timer > h2{
-  font-size: 12rem;
+  font-size: 8rem;
   line-height: 1;
   text-align: center;
 }
 
 @media (max-width: 768px) {
   #timer > h2 {
-    font-size: 8rem;
+    font-size: 4rem;
   }
 }
 

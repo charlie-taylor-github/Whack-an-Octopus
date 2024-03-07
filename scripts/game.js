@@ -11,7 +11,10 @@ class Game {
     }
 
     if (this.#state.getLives() <= 0) return this.#handleLose();
-    if (state.getPoints() >= config.WINNING_POINTS) return this.#handleWin();
+    if (state.getPoints() >= config.WINNING_POINTS) {
+      this.#state.resetHighscore();
+      return this.#handleWin();
+    }
     this.#startNewRound();
   }
 
