@@ -10,15 +10,16 @@ class Game {
       this.#state.loseLife();
     }
 
+    this.#startNewRound();
+  }
+
+  #startNewRound() {
     if (this.#state.getLives() <= 0) return this.#handleLose();
     if (state.getPoints() >= config.WINNING_POINTS) {
       this.#state.resetHighscore();
       return this.#handleWin();
     }
-    this.#startNewRound();
-  }
 
-  #startNewRound() {
     DOM.removeOnCellClick(this.#onCellClick);
     this.#state.updateTimePerRound(previousRoundTime => {
       return config.GET_NEXT_TIME_PER_ROUND(previousRoundTime);
