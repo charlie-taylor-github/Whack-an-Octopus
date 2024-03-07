@@ -29,8 +29,13 @@ const onCellClick = (type) => {
   resetRound();
 };
 
+const setup = () => {
+  state.updateTimePerRound(() => config.INITIAL_TIME_PER_ROUND);
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   state.setPage('game-page');
-  state.updateTimePerRound(() => config.INITIAL_TIME_PER_ROUND);
+  setup();
   resetRound();
 });
