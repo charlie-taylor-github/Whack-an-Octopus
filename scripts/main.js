@@ -2,7 +2,10 @@ const state = new State();
 
 const resetRound = () => {
   DOM.removeOnCellClick(onCellClick);
-  state.startTimer(config.TIME_PER_ROUND, () => {
+  state.updateTimePerRound(previousRoundTime => {
+    return config.GET_NEXT_TIME_PER_ROUND(previousRoundTime);
+  })
+  state.startTimer(() => {
     state.loseLife();
     resetRound();
   });
@@ -28,5 +31,6 @@ const onCellClick = (type) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   state.setPage('game-page');
+  state.updateTimePerRound(() => config.INITIAL_TIME_PER_ROUND);
   resetRound();
 });

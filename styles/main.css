@@ -17,6 +17,11 @@
   font-family: 'Brady Bunch';
   color: var(--blue-dark);
   line-height: 1;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;  
 }
 
 body {

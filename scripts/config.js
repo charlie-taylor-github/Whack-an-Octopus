@@ -8,7 +8,11 @@ config = {
   BLUE_DARK: "00aeef",
 
   POINTS_PER_ROUND: 100,
-  TIME_PER_ROUND: 3,
+  INITIAL_TIME_PER_ROUND: 3,
+  GET_NEXT_TIME_PER_ROUND: function (timeForLastRound) {
+    const timeForNextRound = timeForLastRound * 0.95;
+    return timeForNextRound;
+  },
 
   TARGET_CELL_IMAGE: "./assets/images/target.jpg"
 };

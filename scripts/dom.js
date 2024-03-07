@@ -18,7 +18,7 @@ class DOM {
       else if (c === 'empty_2') cell.classList.add('grid-cell-empty-2');
       else if (c === 'target') {
         cell.classList.add('grid-cell-target');
-        cell.innerHTML = `<img src="${config.TARGET_CELL_IMAGE}" alt="target">`;
+        cell.innerHTML = `<img src="${config.TARGET_CELL_IMAGE}" alt="target" draggable="false" ondragstart="return false;">`;
       }
       else continue;
       document.querySelector('#grid').appendChild(cell)

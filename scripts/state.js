@@ -16,7 +16,8 @@ class State {
       grid: [],
       lives: 3,
       points: 0,
-      time: 0
+      time: 0,
+      timePerRound: 0,
     }
     this.timerId = null;
   }
@@ -62,8 +63,10 @@ class State {
     this.#update({ points: this.#state.points + points });
   }
 
-  startTimer(time, callback) {
+  startTimer(callback) {
     if (this.#timerId) clearInterval(this.#timerId);
+    const time = this.#state.timePerRound;
+    if (time <= 0) throw new Error('Invalid time');
 
     this.#state.time = time;
     this.#timerId = setInterval(() => {
@@ -75,5 +78,10 @@ class State {
         callback();
       }
     }, 10);
+  }
+
+  updateTimePerRound(getNextTimePerRound) {
+    const timeForNextRound = getNextTimePerRound(this.#state.timePerRound);
+    this.#update({ timePerRound: timeForNextRound });
   }
 }
