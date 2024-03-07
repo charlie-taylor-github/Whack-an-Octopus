@@ -40,11 +40,33 @@ class DOM {
     document.querySelector('#score-text').textContent = points;
   }
 
+  static #setScoreImages(points) {
+    const progress = points / config.WINNING_POINTS;
+    const totalStates = 3 * 10;
+    const currentState = Math.floor(progress * totalStates);
+
+    const scoreImages = document.querySelectorAll('.score-image');
+
+    for (let i = 0; i < scoreImages.length; i++) {
+      const image = scoreImages[i];
+      let imageState;
+      if (Math.floor(currentState / 10) > i) {
+        imageState = 9;
+      } else if (Math.floor(currentState / 10) < i) {
+        imageState = 0;
+      } else {
+        imageState = currentState % 10;
+      }
+      image.src = `./assets/images/score/${i + 1}/${imageState}.jpg`;
+    }
+  }
+
   static update(state) {
     this.#setPage(state);
     this.#addCellsToGrid(state.grid);
     this.#setLifeImages(state.lives);
     this.#setPoints(state.points);
+    this.#setScoreImages(state.points);
   }
 
   static updateTimer(time) {
