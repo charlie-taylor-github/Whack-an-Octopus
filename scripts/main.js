@@ -26,16 +26,8 @@ const onCellClick = (type) => {
     state.loseLife();
   }
 
-  if (state.getLives() <= 0) {
-    state.setPage('game-over-page');
-    return;
-  }
-
-  if (state.getPoints() >= config.WINNING_POINTS) {
-    state.setPage('winner-page');
-    return;
-  }
-
+  if (state.getLives() <= 0) return handleLose();
+  if (state.getPoints() >= config.WINNING_POINTS) return handleWin();
   resetRound();
 };
 
@@ -43,12 +35,24 @@ const setupGame = () => {
   state.updateTimePerRound(() => config.INITIAL_TIME_PER_ROUND);
 }
 
+const handleWin = () => {
+  state.setPage('winner-page');
+};
 
-document.addEventListener('DOMContentLoaded', () => {
-  DOM.addOnPlay(() => {
-    state.setPage('game-page');
-    setupGame();
-    resetRound();
-  })
+const handleLose = () => {
+  state.setPage('game-over-page');
+}
+
+const handlePlay = () => {
+  state.setPage('game-page');
+  setupGame();
+  resetRound();
+}
+
+const init = () => {
+  DOM.addOnPlay(handlePlay);
   state.setPage('home-page');
-});
+}
+
+
+document.addEventListener('DOMContentLoaded', init);
