@@ -32,6 +32,7 @@ const onCellClick = (type) => {
 };
 
 const setupGame = () => {
+  state.resetGame();
   state.updateTimePerRound(() => config.INITIAL_TIME_PER_ROUND);
 }
 
@@ -53,6 +54,5 @@ const init = () => {
   DOM.addOnPlay(handlePlay);
   state.setPage('home-page');
 }
-
 
 document.addEventListener('DOMContentLoaded', init);

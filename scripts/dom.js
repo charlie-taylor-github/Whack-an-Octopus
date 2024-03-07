@@ -111,6 +111,12 @@ class DOM {
   }
 
   static addOnPlay(callback) {
-    document.querySelector('#play-button').addEventListener('click', callback);
+    const playButtons = document.querySelectorAll(
+      '#play-button, #winner-play-button, #game-over-play-button'
+    );
+
+    for (const button of playButtons) {
+      button.addEventListener('click', callback);
+    }
   }
 }

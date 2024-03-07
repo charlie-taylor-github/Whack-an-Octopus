@@ -92,4 +92,14 @@ class State {
   getLives() {
     return this.#state.lives;
   }
+
+  resetGame() {
+    this.#update({
+      grid: [],
+      lives: 3,
+      points: 0,
+      time: 0,
+      timePerRound: 0,
+    });
+  }
 }
