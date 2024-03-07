@@ -29,13 +29,16 @@ const onCellClick = (type) => {
   resetRound();
 };
 
-const setup = () => {
+const setupGame = () => {
   state.updateTimePerRound(() => config.INITIAL_TIME_PER_ROUND);
 }
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  state.setPage('game-page');
-  setup();
-  resetRound();
+  DOM.addOnPlay(() => {
+    state.setPage('game-page');
+    setupGame();
+    resetRound();
+  })
+  state.setPage('home-page');
 });

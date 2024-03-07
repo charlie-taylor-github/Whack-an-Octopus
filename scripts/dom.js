@@ -109,4 +109,8 @@ class DOM {
       c.removeEventListener('click', callback);
     }
   }
+
+  static addOnPlay(callback) {
+    document.querySelector('#play-button').addEventListener('click', callback);
+  }
 }

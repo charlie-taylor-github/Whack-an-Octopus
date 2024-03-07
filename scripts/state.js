@@ -1,16 +1,18 @@
 class State {
   #state;
   #timerId;
+  #onWin;
+  #onLose;
 
   async #update(changes) {
     this.#state = {
       ...this.#state,
       ...changes
     };
-    await DOM.update(this.#state);
+    DOM.update(this.#state);
   }
 
-  constructor() {
+  constructor(onWin) {
     this.#state = {
       page: 'home-page',
       grid: [],
@@ -19,7 +21,8 @@ class State {
       time: 0,
       timePerRound: 0,
     }
-    this.timerId = null;
+    this.#timerId = null;
+    this.onWin = onWin;
   }
 
   setPage(page) {
