@@ -10,6 +10,7 @@ const handleLose = () => {
 }
 
 const handlePlay = () => {
+  state.playSoundtrack();
   state.setPage('game-page');
   game = new Game(state, handleLose, handleWin);
   game.start();

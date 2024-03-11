@@ -112,4 +112,8 @@ class State {
   resetHighscore() {
     this.#update({ highscore: 0 });
   }
+
+  playSoundtrack() {
+    DOM.playSound(DOM.soundtrackAudio, { loop: true });
+  }
 }

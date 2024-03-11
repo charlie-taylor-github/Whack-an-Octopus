@@ -1,4 +1,6 @@
 class DOM {
+  static soundtrackAudio = new Audio(config.SOUND_FILE_PATHS.SOUNDTRACK);
+
   static #setPage(state) {
     const pages = document.querySelectorAll('.page');
     pages.forEach(page => page.style.display = 'none');
@@ -123,5 +125,10 @@ class DOM {
     for (const button of playButtons) {
       button.addEventListener('click', callback);
     }
+  }
+
+  static playSound(sound, options = {}) {
+    if (options.loop) sound.loop = true;
+    sound.play();
   }
 }
