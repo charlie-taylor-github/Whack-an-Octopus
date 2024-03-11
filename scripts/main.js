@@ -3,6 +3,7 @@ let game;
 
 const handleWin = () => {
   state.setPage('winner-page');
+  state.playCheers();
 };
 
 const handleLose = () => {

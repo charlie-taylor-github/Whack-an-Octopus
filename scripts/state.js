@@ -116,4 +116,20 @@ class State {
   playSoundtrack() {
     DOM.playSound(DOM.soundtrackAudio, { loop: true });
   }
+
+  playCheers() {
+    DOM.playSound(DOM.cheersAudio, { reset: true });
+  }
+
+  stopCheers() {
+    DOM.stopSound(DOM.cheersAudio);
+  }
+
+  playLoseLife() {
+    DOM.playSound(DOM.loseLifeAudio, { reset: true });
+  }
+
+  playWinPoint() {
+    DOM.playSound(DOM.winPointAudio, { reset: true });
+  }
 }

@@ -2,20 +2,26 @@ class Game {
   #state;
   #handleLose;
   #handleWin;
+  #active = false;
 
   #onCellClick = (type) => {
     if (type === 'target') {
       this.#state.addPoints(config.POINTS_PER_ROUND);
+      this.#state.playWinPoint();
     } else {
       this.#state.loseLife();
+      this.#state.playLoseLife();
     }
 
     this.#startNewRound();
   }
 
   #startNewRound() {
+    this.#state.stopCheers();
+    if (!this.#active) return;
     if (this.#state.getLives() <= 0) return this.#handleLose();
     if (state.getPoints() >= config.WINNING_POINTS) {
+      this.#active = false;
       this.#state.resetHighscore();
       return this.#handleWin();
     }
@@ -48,6 +54,7 @@ class Game {
   start() {
     this.#state.resetGame();
     this.#state.updateTimePerRound(() => config.INITIAL_TIME_PER_ROUND);
+    this.#active = true;
     this.#startNewRound();
   }
 }

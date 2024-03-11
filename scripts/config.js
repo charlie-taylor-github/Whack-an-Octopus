@@ -9,7 +9,7 @@ config = {
 
   // GAME LOGIC
   POINTS_PER_ROUND: 100,
-  WINNING_POINTS: 1000,
+  WINNING_POINTS: 300,
   INITIAL_TIME_PER_ROUND: 3,
   GET_NEXT_TIME_PER_ROUND: function (timeForLastRound) {
     const timeForNextRound = timeForLastRound * 0.95;

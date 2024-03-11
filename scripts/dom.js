@@ -1,5 +1,8 @@
 class DOM {
   static soundtrackAudio = new Audio(config.SOUND_FILE_PATHS.SOUNDTRACK);
+  static cheersAudio = new Audio(config.SOUND_FILE_PATHS.CHEERS);
+  static loseLifeAudio = new Audio(config.SOUND_FILE_PATHS.LOSE_LIFE);
+  static winPointAudio = new Audio(config.SOUND_FILE_PATHS.WIN_POINT);
 
   static #setPage(state) {
     const pages = document.querySelectorAll('.page');
@@ -129,6 +132,13 @@ class DOM {
 
   static playSound(sound, options = {}) {
     if (options.loop) sound.loop = true;
+    if (options.reset && !sound.paused) sound.currentTime = 0;
+
     sound.play();
+  }
+
+  static stopSound(sound) {
+    sound.pause();
+    sound.currentTime = 0;
   }
 }
