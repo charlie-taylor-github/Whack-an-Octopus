@@ -8,12 +8,13 @@ config = {
   BLUE_DARK: "00aeef", // colours for the EMPTY_2 cells
 
   // GAME LOGIC
-  POINTS_PER_ROUND: 1, // number of points awarded for hitting the target
-  WINNING_POINTS: 10, // the number of points needed to win the game
-  INITIAL_TIME_PER_ROUND: 3, // the amount of time given to hit the target in seconds
+  POINTS_PER_ROUND: 150, // number of points awarded for hitting the target
+  WINNING_POINTS: 1000, // the number of points needed to win the game
+  INITIAL_TIME_PER_ROUND: 1, // the amount of time given to hit the target in seconds
 
   GET_NEXT_TIME_PER_ROUND: function (timeForLastRound) { // a function to calculate the time for the next round
-    const timeForNextRound = timeForLastRound * 0.95;
+    if (timeForLastRound < 0.1) return 0.5; // minimum time (0.5 seconds)
+    const timeForNextRound = timeForLastRound * 0.95; // otherwise, reduce the time by 5%
     return timeForNextRound;
   },
 
