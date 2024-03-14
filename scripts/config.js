@@ -10,7 +10,7 @@ config = {
   // GAME LOGIC
   POINTS_PER_ROUND: 150, // number of points awarded for hitting the target
   WINNING_POINTS: 1000, // the number of points needed to win the game
-  INITIAL_TIME_PER_ROUND: 1, // the amount of time given to hit the target in seconds
+  INITIAL_TIME_PER_ROUND: 100, // the amount of time given to hit the target in seconds
 
   GET_NEXT_TIME_PER_ROUND: function (timeForLastRound) { // a function to calculate the time for the next round
     if (timeForLastRound < 0.1) return 0.5; // minimum time (0.5 seconds)

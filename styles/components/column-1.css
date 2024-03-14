@@ -16,7 +16,8 @@
 }
 
 #lives > div > img {
-  width: 50%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 #high-score {
