@@ -1,0 +1,21 @@
+.stat {
+  font-size: 5rem;
+}
+
+@media (max-width: 1000px) {
+  .stat {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .stat {
+    font-size: 3rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .stat {
+    font-size: 4rem;
+  }
+}

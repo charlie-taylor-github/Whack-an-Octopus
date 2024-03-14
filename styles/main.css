@@ -6,6 +6,7 @@
 @import './components/column-2.css';
 @import './components/column-3.css';
 @import './components/game.css';
+@import './components/stat.css';
 
 @import './pages/game-page.css';
 @import './pages/simple-page.css';
@@ -25,11 +26,11 @@
 }
 
 body {
-  padding: 5% 10%;
+  padding: 2%;
   height: calc(var(--vh, 1vh) * 100);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   body {
     padding: 0;
   }

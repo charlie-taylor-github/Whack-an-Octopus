@@ -1,41 +1,53 @@
 #game-header {
-  flex-grow: 1;
+  margin-bottom: 5%;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 800px) or (max-height: 600px) {
+  #game-header {
+    margin-bottom: 0;
+  }
 }
 
 #game-main {
   height: var(--grid-width);
   display: flex;
   gap: 30px;
+  flex: 1 0 auto;
 }
 
 #game-info {
-  width: 100%;
+  width: 75%;
   display: flex;
 }
 
-@media (max-width: 800px) {
-  #game-header {
-    height: 10%;
-  }
-
+@media (max-width: 700px) {
   #game-main {
     flex-direction: column-reverse;
-    height: 90%;
   }
 
   #game-info {
     height: 50%;
+    width: 100%;
+  }
+
+  #game {
+    margin-left: 0;
   }
 }
 
 @media (min-width: 800px) and (min-height: 1000px) {
   #game-main {
     flex-direction: column-reverse;
-    height: 80%;
   }
 
   #game-info {
     height: 50%;
+    width: 100%;
+  }
+
+  #game {
+    margin-left: 0;
   }
 }
 
