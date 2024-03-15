@@ -1,0 +1,17 @@
+.textbox {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.textbox > h2 {
+  font-size: 10vh;
+  line-height: 0.7;
+}
+
+@media (max-aspect-ratio: 1/1){
+  .textbox > h2 {
+    font-size: 10vw;
+  }
+}

@@ -1,6 +1,9 @@
 @import 'utils.css';
 @import './components/header.css';
 @import './components/main-button.css';
+@import './components/textbox.css';
+@import './components/column-1.css';
+@import './components/column-2.css';
 @import './pages/game-page.css';
 
 * {
@@ -9,7 +12,6 @@
   padding: 0;
   font-family: 'Brady Bunch';
   color: var(--blue-dark);
-  line-height: 1;
 
   -webkit-user-select: none;
   -moz-user-select: none;

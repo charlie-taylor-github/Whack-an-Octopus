@@ -20,3 +20,7 @@ window.addEventListener(
 );
 
 window.dispatchEvent(new Event('resize'));
+
+document.addEventListener('DOMContentLoaded', () => {
+  grid.style.display = 'block';
+});

@@ -1,0 +1,11 @@
+#score-images > div {
+  height: calc(100% / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-image {
+  max-width: 100%;
+  max-height: 100%;;
+}
