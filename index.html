@@ -10,7 +10,7 @@
 
 <body>
 
-  <div id="home-page" class="page simple-page">
+  <!-- <div id="home-page" class="page">
     <div class="content">
       <header>
         <h1 class="title">Octopus Game</h1>
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <div id="game-over-page" class="page simple-page">
+  <div id="game-over-page" class="page">
     <div class="content">
       <header>
         <h1 class="title">Game Over</h1>
@@ -32,7 +32,7 @@
     </div>
   </div>
 
-  <div id="winner-page" class="page simple-page">
+  <div id="winner-page" class="page">
     <div class="content">
       <header>
         <h1 class="title">You Won!</h1>
@@ -41,18 +41,17 @@
         <h3 id="winner-play-button" class="main-button">Play Again!</h3>
       </main>
     </div>
-  </div>
+  </div> -->
 
   <div id="game-page" class="page">
-    <div class="content">
-      <header id="game-header">
-        <h1 class="title">Octopus Game</h1>
-      </header>
-      <main id="game-main">
-        <section id="game-info" class="main-section">
-          <div class="info-column">
-            <div id="lives">
-              <div>
+    <header>
+      <!-- <h1 class="title">Octopus Game</h1> -->
+    </header>
+    <main>
+      <section id="game-info">
+        <div class="info-column">
+          <div id="lives">
+            <!-- <div>
                 <img src="./assets/images/life.png" class="life-image">
               </div>
               <div>
@@ -61,48 +60,47 @@
               <div>
                 <img src="./assets/images/life.png" class="life-image">
               </div>
-            </div>
+            </div> -->
             <div id="high-score" class="stat">
-              <h2 id="high-score-text">999</h2>
+              <!-- <h2 id="high-score-text">999</h2> -->
             </div>
           </div>
-          <div class="info-column">
-            <div id="score-images">
-              <div>
-                <img src="./assets/images/score.jpg" class="score-image">
-              </div>
-              <div>
-                <img src="./assets/images/score.jpg" class="score-image">
-              </div>
-              <div>
-                <img src="./assets/images/score.jpg" class="score-image">
-              </div>
-            </div>
+        </div>
+        <div class="info-column">
+          <div id="score-images">
+            <!-- <div>
+                  <img src="./assets/images/score.jpg" class="score-image">
+                </div>
+                <div>
+                  <img src="./assets/images/score.jpg" class="score-image">
+                </div>
+                <div>
+                  <img src="./assets/images/score.jpg" class="score-image">
+                </div> -->
           </div>
-          <div class="info-column">
-            <div id="timer">
-              <h2 id="timer-text" class="stat">3</h2>
-            </div>
-            <div id="score" class="stat">
-              <h2 id="score-text">999</h2>
-            </div>
+        </div>
+        <div class="info-column">
+          <div id="timer">
+            <!-- <h2 id="timer-text" class="stat">3</h2> -->
           </div>
-        </section>
+          <div id="score" class="stat">
+            <!-- <h2 id="score-text">999</h2> -->
+          </div>
+        </div>
+      </section>
 
-        <section id="game" class="main-section">
-          <div id="grid"></div>
-        </section>
-      </main>
-    </div>
+      <section id="game-section">
+        <div id="grid"></div>
+      </section>
+    </main>
   </div>
-
 
   <script src="./scripts/config.js"></script>
   <script src="./scripts/dom.js"></script>
   <script src="./scripts/state.js"></script>
   <script src="./scripts/setup.js"></script>
   <script src="./scripts/game.js"></script>
-  <script src="./scripts/main.js"></script>
+  <!-- <script src="./scripts/main.js"></script> -->
 </body>
 
 </html>
