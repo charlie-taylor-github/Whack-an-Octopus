@@ -2,8 +2,10 @@
 @import './components/header.css';
 @import './components/main-button.css';
 @import './components/textbox.css';
+
 @import './components/column-1.css';
 @import './components/column-2.css';
+@import './components/column-3.css';
 @import './pages/game-page.css';
 
 * {
