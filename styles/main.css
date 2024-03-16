@@ -6,6 +6,7 @@
 @import './components/column-1.css';
 @import './components/column-2.css';
 @import './components/column-3.css';
+@import './components/game-grid.css';
 @import './pages/game-page.css';
 
 * {
@@ -46,5 +47,6 @@ body {
 
 .page > main {
   height: 85%;
-  border: 3px solid red;
+  background-color: var(--blue-light);
+  border: 3px solid var(--blue-dark);
 }
