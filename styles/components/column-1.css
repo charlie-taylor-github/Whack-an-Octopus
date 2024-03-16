@@ -4,7 +4,7 @@
 }
 
 #lives {
-  height: 85%;
+  height: 80%;
   width: 100%;
 
   display: flex;
@@ -16,6 +16,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 3%;
 }
 
 #lives > div > img {
