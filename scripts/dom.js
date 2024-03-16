@@ -51,22 +51,15 @@ class DOM {
 
   static #setScoreImages(points) {
     const progress = points / config.WINNING_POINTS;
-    const totalStates = 3 * 10;
+    const totalStates = 1000;
     const currentState = Math.floor(progress * totalStates);
-
     const scoreImages = document.querySelectorAll('.score-image');
 
+    const currentStateStr = String(currentState).padStart(scoreImages.length, '0');
     for (let i = 0; i < scoreImages.length; i++) {
       const image = scoreImages[i];
-      let imageState;
-      if (Math.floor(currentState / 10) > i) {
-        imageState = 9;
-      } else if (Math.floor(currentState / 10) < i) {
-        imageState = 0;
-      } else {
-        imageState = currentState % 10;
-      }
-      image.src = `./assets/images/score/${i + 1}/${imageState}.jpg`;
+      const digit = currentStateStr[scoreImages.length - 1 - i];
+      image.src = `./assets/images/score/${i + 1}/${digit}.jpg`;
     }
   }
 
