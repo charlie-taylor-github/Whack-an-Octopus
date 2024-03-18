@@ -26,7 +26,6 @@
 
 #game-info {
   display: flex;
-  border: 3px solid var(--blue-dark);
 }
 
 .info-column {

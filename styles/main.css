@@ -47,6 +47,4 @@ body {
 
 .page > main {
   height: 85%;
-  background-color: var(--blue-light);
-  border: 3px solid var(--blue-dark);
 }
