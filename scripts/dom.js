@@ -34,9 +34,9 @@ class DOM {
     const lifeImages = document.querySelectorAll('.life-image');
     for (let i = 0; i < lifeImages.length; i++) {
       if (i < lives) {
-        lifeImages[i].style.display = 'block';
+        lifeImages[lifeImages.length - i - 1].style.display = 'block';
       } else {
-        lifeImages[i].style.display = 'none';
+        lifeImages[lifeImages.length - i - 1].style.display = 'none';
       }
     }
   }
