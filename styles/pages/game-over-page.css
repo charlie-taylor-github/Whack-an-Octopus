@@ -23,4 +23,5 @@
 #game-over-info > .textbox {
   flex: 1;
   margin-top: auto;
+  margin-bottom: 6%;
 }
