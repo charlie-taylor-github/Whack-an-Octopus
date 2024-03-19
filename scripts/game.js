@@ -28,7 +28,7 @@ class Game {
 
     DOM.removeOnCellClick(this.#onCellClick);
     this.#state.updateTimePerRound(previousRoundTime => {
-      return config.GET_NEXT_TIME_PER_ROUND(previousRoundTime);
+      return config.GET_NEXT_TIME_PER_ROUND(previousRoundTime, this.#state.getPoints());
     });
 
     this.#state.startTimer(() => {

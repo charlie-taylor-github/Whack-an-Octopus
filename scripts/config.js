@@ -12,10 +12,15 @@ config = {
   WINNING_POINTS: 1000, // the number of points needed to win the game
   INITIAL_TIME_PER_ROUND: 5, // the amount of time given to hit the target in seconds
 
-  GET_NEXT_TIME_PER_ROUND: function (timeForLastRound) { // a function to calculate the time for the next round
-    if (timeForLastRound < 1) return 1; // minimum time (1 second)
-    const timeForNextRound = timeForLastRound * 0.9; // otherwise, reduce the time by 10%
-    return timeForNextRound;
+  GET_NEXT_TIME_PER_ROUND: function (timeForLastRound, currentScore) { // a function to calculate the time for the next round
+    if (currentScore >= 900) return 0.3;
+    if (currentScore >= 500) return 0.5;
+    if (currentScore >= 30) return 1;
+    if (currentScore >= 20) return 2;
+    if (currentScore >= 15) return 3;
+    if (currentScore >= 10) return 6;
+    if (currentScore >= 5) return 8;
+    return 10;
   },
 
   // ASSETS
