@@ -1,0 +1,26 @@
+#game-over-page > main {
+  display: flex;
+  flex-direction: column;
+}
+
+#game-over-action {
+  flex: 1;
+}
+
+#game-over-info {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+}
+
+@media (max-aspect-ratio: 1/1){
+  #game-over-info {
+    width: 100%;
+  }
+}
+
+#game-over-info > .textbox {
+  flex: 1;
+  margin-top: auto;
+}

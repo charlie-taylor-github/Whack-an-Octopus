@@ -9,6 +9,8 @@
 @import './components/game-grid.css';
 @import './pages/game-page.css';
 
+@import './pages/game-over-page.css';
+
 * {
   box-sizing:border-box;
   margin: 0;

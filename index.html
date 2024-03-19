@@ -24,7 +24,17 @@
       <h2>Game Over</h2>
     </header>
     <main>
-      <h3 id="game-over-play-button" class="main-button">Try Again</h3>
+      <div id="game-over-action">
+        <h3 id="game-over-play-button" class="main-button">Try Again</h3>
+      </div>
+      <div id="game-over-info">
+        <div class="textbox">
+          <h2 class="timer-text">3</h2>
+        </div>
+        <div class="textbox">
+          <h2 class="score-text">999</h2>
+        </div>
+      </div>
     </main>
   </div>
 
@@ -56,7 +66,7 @@
             </div>
           </div>
           <div id="high-score" class="textbox">
-            <h2 id="high-score-text">999</h2>
+            <h2 id="game-high-score-text">999</h2>
           </div>
         </div>
         <div id="score-images" class="info-column">
@@ -75,7 +85,7 @@
             <h2 id="timer-text">3</h2>
           </div>
           <div id="score" class="textbox">
-            <h2 id="score-text">999</h2>
+            <h2 id="game-score-text">999</h2>
           </div>
         </div>
       </section>
@@ -86,12 +96,12 @@
     </main>
   </div>
 
-  <script src="./scripts/config.js"></script>
-  <script src="./scripts/dom.js"></script>
-  <script src="./scripts/state.js"></script>
-  <script src="./scripts/setup.js"></script>
-  <script src="./scripts/game.js"></script>
-  <script src="./scripts/main.js"></script>
+  <script defer src="./scripts/config.js"></script>
+  <script defer src="./scripts/dom.js"></script>
+  <script defer src="./scripts/state.js"></script>
+  <script defer src="./scripts/setup.js"></script>
+  <script defer src="./scripts/game.js"></script>
+  <script defer src="./scripts/main.js"></script>
 </body>
 
 </html>
