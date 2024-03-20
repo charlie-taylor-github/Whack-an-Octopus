@@ -43,10 +43,12 @@ class DOM {
 
   static #setPoints(points) {
     document.querySelector('#game-score-text').textContent = points;
+    document.querySelector('#game-over-score-text').textContent = points;
   }
 
   static #setHighscore(highscore) {
     document.querySelector('#game-high-score-text').textContent = highscore;
+    document.querySelector('#game-over-high-score-text').textContent = highscore;
   }
 
   static #setScoreImages(points) {
